@@ -6,7 +6,6 @@ const url = "http://localhost:8000/api/events";
 const fetchEvents = async () => {
   const res = await fetch(url);
   const data = await res.json();
-  console.log(data.member);
   
   return Array.isArray(data.member) ? data.member : [];
 }
